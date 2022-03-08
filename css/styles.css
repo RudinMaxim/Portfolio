@@ -202,7 +202,7 @@ section .title::after {
 
 .home {
     display: flex;
-    background: url("/img/jeremy-bishop-8xznAGy4HcY-unsplash\ \(1\).jpg") no-repeat center;
+    background: url("img/jeremy-bishop-8xznAGy4HcY-unsplash\ \(1\).jpg") no-repeat center;
     height: 100vh;
     color: #fff;
     min-height: 500px;
