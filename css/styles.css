@@ -13,26 +13,6 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
-.grey__bg {
-    background-color: #555;
-}
-
-::-webkit-scrollbar {
-    width: 10px;
-}
-
-::-webkit-scrollbar-track {
-    background: #f1f1f1;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #888;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #555;
-}
-
 section {
     padding: 100px 0;
 }
@@ -349,6 +329,7 @@ section .title::after {
     background: crimson;
     color: #fff;
     font-size: 20px;
+    font-size: 25px;
     font-weight: 500;
     padding: 10px 20px;
     margin-top: 20px;
@@ -642,6 +623,58 @@ input[type=checkbox]+label {
 input[type=checkbox]:checked+label {
     color: #f00;
     font-style: normal;
+}
+
+
+/* ============FOOTOR============ */
+
+.footer {
+    background-color: #D9D9D9;
+    height: 100%;
+}
+
+.footor__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+}
+
+.footer__links {
+    font-size: 20px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.footer__link {
+    color: black;
+}
+
+.footer__socials {}
+
+.footer__social {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 10px;
+    margin-top: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.footer__copy {
+    opacity: 0.7;
+    padding-top: 10px;
+}
+
+
+/* ======================== */
+
+.swiper {
+    width: 600px;
+    height: 300px;
 }
 
 
