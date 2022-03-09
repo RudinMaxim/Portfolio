@@ -658,9 +658,6 @@ input[type=checkbox]:checked+label {
     .max-width {
         padding: 0 50px;
     }
-}
-
-@media (max-width:1200px) {
     .menu-btn {
         display: block;
         z-index: 999;
@@ -698,7 +695,7 @@ input[type=checkbox]:checked+label {
     }
     .home .home-content a {
         font-size: 23px;
-        padding: 10px 10px;
+        padding: 10px 30px;
     }
     .max-width {
         max-width: 930px;
@@ -739,14 +736,6 @@ input[type=checkbox]:checked+label {
         font-size: 20px;
     }
     .services .serv-content .card {
-        width: 100%;
-    }
-    .submit-btn {
-        width: 100%;
-        float: none;
-        text-align: center;
-    }
-    .styled-input {
         width: 100%;
     }
 }
