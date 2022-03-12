@@ -19,6 +19,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 
@@ -36,8 +38,7 @@
                     <li><a href="#home" class="menu-btn">Home</a></li>
                     <li><a href="#about" class="menu-btn">About</a></li>
                     <li><a href="#skills" class="menu-btn">Skills</a></li>
-                    <!-- <li><a href="#work" class="menu-btn">Work</a></li> -->
-                    <!-- <li><a href="#services" class="menu-btn">Services</a></li> -->
+                    <li><a href="#work" class="menu-btn">Work</a></li>
                     <li><a href="#contact" class="menu-btn">Contact</a></li>
                 </ul>
                 <div class="menu-btn">
@@ -83,17 +84,21 @@
                     <a href="CV.docx" class="cv">Download CV</a>
                 </div>
             </div>
+            <h2 class="subtitle">Education</h2>
+            <div class="about-еducation-content">
+
+            </div>
         </div>
     </section>
 
     <!-- Skills -->
     <section class="skills" id=skills>
         <div class="max-width">
-            <div class="skills__cont grid">
+            <div class="skills__continer">
                 <h2 class="title">Skills</h2>
                 <div>
                     <!-- skills 1 -->
-                    <div class="skills__continer ">
+                    <div class="skills__continer skills__open">
                         <div class="skills__header">
                             <img src="img/icon/bx-code-curly.svg" class="skills__icon">
                             <div>
@@ -150,7 +155,7 @@
                         </div>
                     </div>
                     <!-- skills 2 -->
-                    <div class="skills__continer">
+                    <div class="skills__continer skills__close">
                         <div class="skills__header">
                             <img src="img/icon/bx-server.svg" class="skills__icon">
                             <div>
@@ -206,7 +211,7 @@
                         </div>
                     </div>
                     <!-- skills 3 -->
-                    <div class="skills__continer">
+                    <div class="skills__continer skills__close">
                         <div class="skills__header">
                             <img src="img/icon/bx-brush.svg" class="skills__icon">
                             <div>
@@ -262,7 +267,7 @@
                         </div>
                     </div>
                     <!-- skills 4 -->
-                    <div class="skills__continer">
+                    <div class="skills__continer skills__close">
                         <div class="skills__header">
                             <img src="img/icon/bx-game.svg" class="skills__icon">
                             <div>
@@ -313,39 +318,46 @@
     </section>
 
     <!-- Work -->
-    <!-- <section class="work" id="work">
+    <section class="work" id="work">
         <div class="max-width">
             <h2 class="title">Work</h2>
-          
-            <div class="swiper">
-              
-                <div class="swiper-wrapper">
-                
-                    <div class="swiper-slide">Slide 1</div>
-                    <div class="swiper-slide">Slide 2</div>
-                    <div class="swiper-slide">Slide 3</div>
-                    ...
+            <div class="slider">
+                <div class="owl-carousel">
+                    <div class="slider-card">
+                        <div class="slider__card">
+                            <img src="img/icon/bx-calculator.svg" alt="">
+                        </div>
+                        <h2 class="slider__card-h2"><b>Simple Calculator</b></h2>
+                        <button class="slider__card-button">Follow the link</button>
+                    </div>
+                    <div class="slider-card">
+                        <div class="slider__card">
+                            <img src="img/icon/bx-dice-5.svg" alt="">
+                        </div>
+                        <h2 class="slider__card-h2"><b>Generate number</b></h2>
+                        <button class="slider__card-button">Follow the link</button>
+                    </div>
+                    <div class="slider-card">
+                        <div class="slider__card">
+                            <img src="img/icon/bx-layout.svg">
+                        </div>
+                        <h2 class="slider__card-h2"><b>Assembly with links to layout</b></h2>
+                        <button class="slider__card-button">Follow the link</button>
+                    </div>
+                    <div class="slider-card">
+                        <div class="slider__card">
+                            <img src="img/icon/bx-layout.svg">
+                        </div>
+                        <h2 class="slider__card-h2"><b>Assembly with links to layout</b></h2>
+                        <button class="slider__card-button">Follow the link</button>
+                    </div>
                 </div>
-               
-                <div class="swiper-pagination"></div>
-
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-
-                <div class="swiper-scrollbar"></div>
             </div>
         </div>
-    </section> -->
-
-    <!-- Services -->
-    <!-- <section class="services" id="services">
-        <div class="max-width">
-            <h2 class="title">Services</h2>
-        </div>
-    </section> -->
+    </section>
 
     <!-- Contact -->
-    <section class="contact__contact" id="contact">
+    <!-- <section class="contact__contact" id="contact">
         <div class="max-width">
             <h2 class="title">Contact</h2>
             <form action="">
@@ -381,7 +393,7 @@
                 </div>
             </form>
         </div>
-    </section>
+    </section> -->
 
     <!-- footer -->
     <footer class="footer" id="footer">
@@ -391,7 +403,6 @@
                 <a href="#about" class="footer__link">About</a>
                 <a href="#skills" class="footer__link">Skills</a>
                 <!-- <li><a href="#work" class="">Work</a></li> -->
-                <!-- <li><a href="#services" class="">Services</a></li> -->
                 <a href="#contact" class="footer__link">Contact</a>
             </div>
 
