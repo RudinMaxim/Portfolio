@@ -14,7 +14,8 @@ body {
 }
 
 section {
-    padding: 130px 0;
+    padding: 120px;
+    height: 100vh;
 }
 
 .max-width {
@@ -234,6 +235,16 @@ section .title::after {
     opacity: 0.7;
 }
 
+.cv {
+    display: inline-block;
+    background: crimson;
+    font-size: 20px;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
 
 /* ======================== */
 
@@ -304,7 +315,7 @@ section .title::after {
 
 .about .about-content .left img {
     height: 100%;
-    width: 400px;
+    width: 350px;
     object-fit: cover;
     border-radius: 6px;
 }
@@ -313,73 +324,14 @@ section .title::after {
     width: 55%;
 }
 
-.about .about-content .right .text {
+.about .about-content .right {
     font-size: 25px;
-    font-weight: 700;
+    font-weight: 500;
     margin-bottom: 20px;
-}
-
-.about .about-content .right .text__sub {
-    font-size: 18px;
-    margin-bottom: 10px;
 }
 
 .about .about-content .right p {
     text-align: justify;
-}
-
-.about .about-content .right .cv {
-    display: inline-block;
-    background: crimson;
-    color: #fff;
-    font-size: 25px;
-    font-weight: 500;
-    padding: 10px 20px;
-    margin-top: 20px;
-    border-radius: 6px;
-    border: 2px solid crimson;
-    transition: all 0.3s ease;
-}
-
-.about .about-content .right a:hover {
-    color: crimson;
-    background: none;
-}
-
-.a_Link {
-    color: black;
-}
-
-.uk-timeline .uk-timeline-item .uk-card {
-    max-height: 300px;
-}
-
-.uk-timeline .uk-timeline-item {
-    display: flex;
-    position: relative;
-}
-
-.uk-timeline .uk-timeline-item::before {
-    background: #dadee4;
-    content: "";
-    height: 100%;
-    left: 19px;
-    position: absolute;
-    top: 20px;
-    width: 2px;
-    z-index: -1;
-}
-
-.uk-timeline .uk-timeline-item .uk-timeline-icon .uk-badge {
-    margin-top: 20px;
-    width: 40px;
-    height: 40px;
-}
-
-.uk-timeline .uk-timeline-item .uk-timeline-content {
-    -ms-flex: 1 1 auto;
-    flex: 1 1 auto;
-    padding: 0 0 0 1rem;
 }
 
 
@@ -388,7 +340,9 @@ section .title::after {
 
 /* ============SKILLS============ */
 
-.skills {}
+.skills {
+    /* height: 100vh; */
+}
 
 .skills__continer {
     row-gap: 0;
@@ -398,21 +352,16 @@ section .title::after {
 .skills__header {
     display: flex;
     align-items: center;
-    cursor: pointer;
-}
-
-.skills__icon,
-.skills__arrow {
-    font-size: 20px;
-    color: black;
 }
 
 .skills__icon {
+    font-size: 20px;
+    color: black;
     margin-right: 20px;
 }
 
 .skills__title {
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .skills__titles {
@@ -424,11 +373,6 @@ section .title::after {
 .skills__subtitle {
     font-size: 12px;
     opacity: 0.9;
-}
-
-.skills__arrow {
-    margin-left: auto;
-    transition: .4s;
 }
 
 .skills__name {
@@ -453,27 +397,13 @@ section .title::after {
 }
 
 .skills__list {
-    row-gap: 1.5rem;
+    row-gap: 24px;
     padding-left: 43px;
     margin-top: 20px;
 }
 
-.skills__close .skills__list {
-    height: 0;
-    overflow: hidden;
-}
-
-.skills__open .skills__list {
-    height: max-content;
-    margin-bottom: 20px;
-}
-
-.skills__open .skills__arrow {
-    transform: rotate(-180deg);
-}
-
 .skills__html {
-    width: 70%;
+    width: 50%;
 }
 
 .skills__css {
@@ -481,55 +411,27 @@ section .title::after {
 }
 
 .skills__js {
-    width: 40%;
+    width: 20%;
 }
 
 .skills__React {
-    width: 10%;
+    width: 0%;
 }
 
 .skills__php {
-    width: 20%;
+    width: 10%;
 }
 
 .skills__node {
-    width: 5%;
+    width: 0%;
 }
 
 .skills__typescript {
-    width: 5%;
+    width: 0%;
 }
 
 .skills__python {
-    width: 30%;
-}
-
-.skills__figma {
-    width: 80%;
-}
-
-.skills__sketch {
-    width: 40%;
-}
-
-.skills__blender {
-    width: 40%;
-}
-
-.skills__photoshop {
-    width: 60%;
-}
-
-.skills__с {
-    width: 1%;
-}
-
-.skills__unity {
-    width: 20%;
-}
-
-.skills__engine {
-    width: 40%;
+    width: 10%;
 }
 
 
@@ -538,73 +440,14 @@ section .title::after {
 
 /* ============WORK============ */
 
-.work {}
 
-.home__content {
-    justify-content: center;
-    row-gap: 2rem;
-}
-
-.work__img {
-    position: relative;
-    overflow: hidden;
-}
-
-.work__img img {
-    border-radius: 5px;
-}
-
-.work__link {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #595959;
-}
-
-.work__link-name {}
+/* ======================== */
 
 
 /* ============CONTACT============ */
 
-#overlay {
-    width: 100%;
-    height: 100%;
-    align-items: center;
-}
 
-.contact__contact {
-    background-color: #D9D9D9;
-}
-
-.form {
-    max-width: 600px;
-    width: 90%;
-    margin: 17vh auto 0 auto;
-    padding: 20px;
-    align-items: center;
-    justify-content: center;
-}
-
-.conact__label {
-    display: block;
-    margin: 20px 0;
-}
-
-input,
-textarea {
-    width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-    outline: auto;
-    resize: none;
-    border: none;
-    border-bottom: 1 solid black;
-}
-
-.error {}
-
-.center {}
+/* ======================== */
 
 
 /* ============FOOTOR============ */
@@ -665,14 +508,16 @@ textarea {
 
 @media (max-width: 1104px) {
     .about .about-content .left img {
-        height: 350px;
-        width: 350px;
+        height: 180%;
+        width: 180%;
+        border-radius: 20px;
     }
 }
 
 @media (max-width: 991px) {
     .max-width {
         padding: 0 50px;
+        max-width: 930px;
     }
     .menu-btn {
         display: block;
@@ -700,23 +545,23 @@ textarea {
     }
     .navbar .menu li a {
         display: inline-block;
-        margin: 20px 0;
-        font-size: 25px;
+        margin: 60px 0;
+        font-size: 80px;
     }
-    .home .home-content .text-2 {
+    .home .home-content .text-1 {
         font-size: 70px;
     }
+    .home .home-content .text-2 {
+        font-size: 100px;
+    }
     .home .home-content .text-3 {
-        font-size: 35px;
+        font-size: 70px;
     }
     .home .home-content a {
         font-size: 23px;
         padding: 10px 30px;
     }
-    .max-width {
-        max-width: 930px;
-    }
-    .about .about-content .column {
+    .about .about-content {
         width: 100%;
     }
     .about .about-content .left {
@@ -727,62 +572,45 @@ textarea {
     .about .about-content .right {
         flex: 100%;
     }
-    .services .serv-content .card {
-        width: calc(50% - 10px);
-        margin-bottom: 20px;
+    .text__sub {
+        font-size: 40px;
     }
-    .skills .skills-content .column,
-    .contact .contact-content .column {
-        width: 100%;
-        margin-bottom: 35px;
+    .scroll-down {
+        height: 80px;
+        width: 60px;
     }
-}
-
-@media (max-width: 690px) {
-    .max-width {
-        padding: 0 23px;
+    section {
+        padding: 100px;
+        height: max-content;
     }
-    .home .home-content .text-2 {
-        font-size: 60px;
+    section .title {
+        font-size: 80px;
     }
-    .home .home-content .text-3 {
-        font-size: 32px;
+    .skills {
+        height: 100vh;
     }
-    .home .home-content a {
-        font-size: 20px;
-    }
-    .services .serv-content .card {
-        width: 100%;
-    }
-}
-
-@media (max-width: 500px) {
-    .home .home-content .text-2 {
+    .skills__title {
         font-size: 50px;
     }
-    .home .home-content .text-3 {
-        font-size: 27px;
+    .skills__icon {
+        height: 50px;
+        width: 50px;
     }
-    .about .about-content .right .text,
-    .skills .skills-content .left .text {
-        font-size: 19px;
+    .skills__subtitle {
+        font-size: 30px;
     }
-    .contact .right form .fields {
-        flex-direction: column;
+    .skills__name {
+        font-size: 30px;
+        font-weight: 700;
     }
-    .contact .right form .name,
-    .contact .right form .email {
-        margin: 0;
+    .skills__number {
+        font-size: 20px;
+        font-weight: 700;
     }
-    .right form .error-box {
-        width: 150px;
-    }
-    .scroll-up-btn {
-        right: 15px;
-        bottom: 15px;
-        height: 38px;
-        width: 35px;
-        font-size: 23px;
-        line-height: 38px;
+    .skills__bar,
+    .skills__percentage {
+        height: 10px;
+        border-radius: 0.25px;
+        margin-bottom: 40px;
     }
 }
