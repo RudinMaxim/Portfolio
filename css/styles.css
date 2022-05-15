@@ -14,12 +14,12 @@ body {
 }
 
 section {
-    padding: 120px;
+    padding: 80px;
     height: 100vh;
 }
 
 .max-width {
-    max-width: 1200px;
+    max-width: 1400px;
     padding: 0 80px;
     margin: auto;
 }
@@ -315,7 +315,7 @@ section .title::after {
 
 .about .about-content .left img {
     height: 100%;
-    width: 350px;
+    width: 80%;
     object-fit: cover;
     border-radius: 6px;
 }
@@ -341,7 +341,7 @@ section .title::after {
 /* ============SKILLS============ */
 
 .skills {
-    /* height: 100vh; */
+    height: 100vh;
 }
 
 .skills__continer {
@@ -371,18 +371,18 @@ section .title::after {
 }
 
 .skills__subtitle {
-    font-size: 12px;
+    font-size: 15px;
     opacity: 0.9;
 }
 
 .skills__name {
-    font-size: 15px;
+    font-size: 20px;
     font-weight: 700;
 }
 
 .skills__bar,
 .skills__percentage {
-    height: 5px;
+    height: 8px;
     border-radius: 0.25px;
     margin-bottom: 20px;
 }
@@ -612,5 +612,13 @@ section .title::after {
         height: 10px;
         border-radius: 0.25px;
         margin-bottom: 40px;
+    }
+    .skills__header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .skills__continer {
+        padding: 50px 0px;
     }
 }
