@@ -402,7 +402,7 @@ section .title::after {
 }
 
 .skills__html {
-    width: 50%;
+    width: 60%;
 }
 
 .skills__css {
@@ -460,6 +460,7 @@ section .title::after {
     margin: 20px 20px;
     transition: .4s;
     border-radius: 15px;
+    cursor: pointer;
 }
 
 .work__card:hover {
@@ -720,5 +721,11 @@ section .title::after {
     }
     .card_subtitle {
         font-size: 20px;
+    }
+}
+
+@media (max-width: 766px) {
+    .skills {
+        height: max-content;
     }
 }
