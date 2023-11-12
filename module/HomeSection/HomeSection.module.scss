@@ -1,0 +1,114 @@
+.HomeSection {
+	height: 90dvh;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+	h1 {
+		font-size: 2.5rem;
+	}
+	.HomeLeftSide {
+		position: relative;
+		height: 100%;
+		width: 50%;
+		border-radius: var(--border-radius);
+		background-color: var(--secondary-color);
+		padding: 1rem;
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+		.myphoto {
+			height: 600px;
+			width: 400px;
+			position: absolute;
+			z-index: 100;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			margin: auto;
+			min-width: 60%;
+			min-height: 60%;
+			background-image: url('../../assets/myphoto.png');
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+		}
+
+		.CircleLink {
+			position: absolute;
+			top: 25%;
+			right: 0;
+			width: 125px;
+			height: 125px;
+			border-radius: 50%;
+			background-color: var(--primary-color);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			span {
+				svg {
+					padding: 1rem;
+					border-radius: 50%;
+					border: 1px solid var(--bg-color);
+					width: 55px;
+					height: 55px;
+					path {
+						fill: var(--bg-color);
+					}
+				}
+			}
+			p {
+			}
+		}
+		.HomeCardListLeft {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 2.5rem;
+			z-index: 200;
+		}
+	}
+	.HomeRightSide {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		width: 50%;
+		height: 100%;
+		padding: 0 0.5rem;
+
+		.HomeRightSideAbout {
+			background-color: var(--text-color);
+			border-radius: var(--border-radius);
+			color: var(--bg-color);
+			padding: 2rem;
+			.Colume {
+				margin-bottom: 1rem;
+			}
+			h3 {
+				font-size: 2rem;
+				font-weight: 700;
+			}
+			p {
+				font-size: 0.75rem;
+				margin-bottom: 1rem;
+				font-weight: 400;
+				text-align: justify;
+			}
+			.SocialLinks {
+				display: flex;
+				justify-content: end;
+				gap: 0.5rem;
+				svg {
+					width: 25px;
+					height: 25px;
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 769px) {
+	.HomeSection {
+		flex-direction: column;
+	}
+}

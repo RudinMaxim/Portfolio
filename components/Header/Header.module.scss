@@ -1,0 +1,15 @@
+.Header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-weight: 400;
+	font-size: 1rem;
+	text-transform: uppercase;
+	margin: 0.5rem 0;
+	.RightSide {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 1rem;
+	}
+}

@@ -1,0 +1,58 @@
+:root {
+	--max-width: 1440px;
+	--border-radius: 30px;
+	--transition: 0.3s ease-in-out;
+
+	--primary-color: #c3b1a4;
+	--secondary-color: #f0f1f3;
+	--bg-color: #f8f9fa;
+	--text-color: #070a11;
+	[data-theme='dark'] {
+		--primary-color: #c3b1a4;
+		--secondary-color: #f0f1f3;
+		--bg-color: #070a11;
+		--text-color: #f8f9fa;
+	}
+}
+::selection {
+	background: var(--secondary-color);
+}
+::-webkit-scrollbar {
+	width: 0;
+}
+body,
+html {
+	position: relative;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 1.5;
+	color: var(--text-color);
+	background: var(--bg-color);
+}
+.container {
+	max-width: var(--max-width);
+	margin: 0 auto;
+	padding: 0px 8px;
+	background-color: var(--bg-color);
+}
+
+// Reset
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+	background-color: transparent;
+}
+ul,
+ol {
+	list-style: none;
+}
