@@ -16,16 +16,6 @@ export default function AboutSection(): React.JSX.Element {
 						</p>
 						<CustomLink to='#'>Lorem</CustomLink>
 					</div>
-					<div className={style.AboutTopBarColume}>
-						<h3>Обо мне</h3>
-						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus,
-							amet neque. Eligendi dolorem assumenda eum corporis, earum at
-							necessitatibus aperiam voluptate iusto minus eveniet doloribus,
-							dolore ipsa, illum est eos?
-						</p>
-						<CustomLink to='#'>Lorem</CustomLink>
-					</div>
 				</div>
 			</section> */}
 		</div>

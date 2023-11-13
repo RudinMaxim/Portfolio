@@ -6,10 +6,12 @@
 	gap: 1rem;
 	h1 {
 		font-size: 2.5rem;
+		text-align: justify;
+		margin-bottom: 0.5rem;
 	}
 	.HomeLeftSide {
 		position: relative;
-		height: 100%;
+		height: 600px;
 		width: 50%;
 		border-radius: var(--border-radius);
 		background-color: var(--secondary-color);
@@ -18,8 +20,11 @@
 		justify-content: space-between;
 		flex-direction: column;
 		.myphoto {
+			display: block;
 			height: 600px;
-			width: 400px;
+			width: 350px;
+			min-width: 60%;
+			min-height: 60%;
 			position: absolute;
 			z-index: 100;
 			top: 0;
@@ -27,8 +32,6 @@
 			right: 0;
 			bottom: 0;
 			margin: auto;
-			min-width: 60%;
-			min-height: 60%;
 			background-image: url('../../assets/myphoto.png');
 			background-repeat: no-repeat;
 			background-position: center;
@@ -58,15 +61,13 @@
 					}
 				}
 			}
-			p {
-			}
 		}
 		.HomeCardListLeft {
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			gap: 2.5rem;
 			z-index: 200;
+			gap: 1rem;
 		}
 	}
 	.HomeRightSide {
@@ -107,8 +108,62 @@
 		}
 	}
 }
+@media screen and (max-width: 1025px) {
+	.HomeSection {
+		h1 {
+			font-size: 2rem;
+		}
+		.HomeCardListLeft {
+			justify-content: space-between;
+			gap: 1rem;
+		}
+	}
+}
 @media screen and (max-width: 769px) {
 	.HomeSection {
+		h1 {
+			text-align: center;
+		}
 		flex-direction: column;
+		.HomeLeftSide,
+		.HomeRightSide {
+			width: 100%;
+		}
+		.HomeLeftSide {
+			min-height: 700px;
+			.myphoto {
+				height: 100%;
+			}
+		}
+	}
+}
+@media screen and (max-width: 426px) {
+	.HomeSection {
+		.HomeLeftSide {
+			padding-right: 0;
+			padding-left: 0;
+		}
+		.HomeRightSideAbout {
+			padding: 1rem;
+		}
+		.myphoto {
+			width: 100%;
+		}
+
+		.HomeCardListLeft {
+			div {
+				font-size: 0.75rem;
+				width: 50%;
+				a {
+					font-size: 0.75rem;
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 321px) {
+	.myphoto {
+		height: 500px;
+		width: 300px !important;
 	}
 }

@@ -31,7 +31,6 @@ export default function CustomCard({
 	return (
 		<div className={`${style.CustomCard} ${backgroundClass}`}>
 			<p>{text}</p>
-
 			<CustomLink to={url} background='primary'>
 				{texturl}
 			</CustomLink>

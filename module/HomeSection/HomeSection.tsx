@@ -2,8 +2,13 @@ import React from 'react';
 import style from './HomeSection.module.scss';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
-import { CustomCard, Teg } from '../../components';
-import { FaChevronRight, FaGithub, FaTelegram } from 'react-icons/fa6';
+import { CustomCard, Loader, Teg } from '../../components';
+import {
+	FaChevronRight,
+	FaGithub,
+	FaLinkedinIn,
+	FaTelegram,
+} from 'react-icons/fa6';
 
 export default function HomeSection(): React.JSX.Element {
 	const p = useTranslations('Profile');
@@ -48,6 +53,11 @@ export default function HomeSection(): React.JSX.Element {
 							<p>{p('shortSkills.text')}</p>
 						</div>
 						<div className={style.SocialLinks}>
+							<span>
+								<Link href={'https://github.com/RudinMaxim'}>
+									<FaLinkedinIn />
+								</Link>
+							</span>
 							<span>
 								<Link href={'https://github.com/RudinMaxim'}>
 									<FaGithub />
