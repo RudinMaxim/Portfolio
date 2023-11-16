@@ -2,13 +2,8 @@ import React from 'react';
 import style from './HomeSection.module.scss';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
-import { CustomCard, Loader, Teg } from '../../components';
-import {
-	FaChevronRight,
-	FaGithub,
-	FaLinkedinIn,
-	FaTelegram,
-} from 'react-icons/fa6';
+import { CustomCard, Teg } from '../../components';
+import { FaGithub, FaLinkedinIn, FaTelegram } from 'react-icons/fa6';
 
 export default function HomeSection(): React.JSX.Element {
 	const p = useTranslations('Profile');
@@ -18,13 +13,7 @@ export default function HomeSection(): React.JSX.Element {
 			<section className={`${style.HomeSection}`}>
 				<div className={style.HomeLeftSide}>
 					<Teg color='secondary' text={p('location')} />
-					<div className={style.myphoto}>
-						<Link href={'/project'} className={style.CircleLink}>
-							<span>
-								<FaChevronRight />
-							</span>
-						</Link>
-					</div>
+					<div className={style.myphoto}></div>
 					<div className={style.HomeCardListLeft}>
 						<CustomCard
 							background={'secondary'}
@@ -36,12 +25,15 @@ export default function HomeSection(): React.JSX.Element {
 							background={'none'}
 							text={O('cardFormHome.text')}
 							texturl={O('cardFormHome.urlName')}
-							url='/'
+							url='/#connect'
 						/>
 					</div>
 				</div>
 				<div className={style.HomeRightSide}>
-					<h1>{O('titleHome')}</h1>
+					<h1>
+						{O('titleHome')}
+						{/* <CarouselWord pre={O('titleHome')} /> */}
+					</h1>
 
 					<div className={style.HomeRightSideAbout}>
 						<div className={style.Colume}>

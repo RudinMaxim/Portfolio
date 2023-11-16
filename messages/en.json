@@ -1,6 +1,6 @@
 {
 	"Profile": {
-		"name": "Rudin Maksim",
+		"name": "Maksim Rudin",
 		"location": "Russia, Perm",
 		"shortAboutme": {
 			"title": "About me",
@@ -13,7 +13,7 @@
 	},
 	"Other": {
 		"project": "Projects",
-		"titleHome": "My name is Rudin Maksim, Full Stack developer",
+		"titleHome": "My name is Maksim Rudin, Full Stack developer.",
 		"cardCVHome": {
 			"text": "Do you want to hire me? Download the resume in PDF.",
 			"urlName": "CV"

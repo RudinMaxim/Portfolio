@@ -1,6 +1,6 @@
 {
 	"Profile": {
-		"name": "Рудин Максим",
+		"name": "Максим Рудин",
 		"location": "Россия, Пермь",
 		"shortAboutme": {
 			"title": "Обо мне",
@@ -13,7 +13,7 @@
 	},
 	"Other": {
 		"project": "Проекты",
-		"titleHome": "Меня зовут Рудин Максим, Full Stack разработчик",
+		"titleHome": "Меня зовут Максим Рудин, Full Stack разработчик.",
 		"cardCVHome": {
 			"text": "Хочешь нанять меня? Скачай резюме в PDF.",
 			"urlName": "Резюме"

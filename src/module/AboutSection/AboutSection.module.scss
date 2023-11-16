@@ -1,0 +1,27 @@
+.AboutSection {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+	gap: 1rem 1rem;
+	grid-template-areas:
+		'main main main skill1'
+		'main main main skill2'
+		'main main main skill3'
+		'sliderProject sliderProject sliderProject sliderProject'
+		'sliderProject sliderProject sliderProject sliderProject';
+}
+.main {
+	grid-area: main;
+}
+.skill1 {
+	grid-area: skill1;
+}
+.skill2 {
+	grid-area: skill2;
+}
+.skill3 {
+	grid-area: skill3;
+}
+.sliderProject {
+	grid-area: sliderProject;
+}

@@ -28,12 +28,16 @@ html {
 	line-height: 1.5;
 	color: var(--text-color);
 	background: var(--bg-color);
+	scroll-behavior: smooth;
 }
 .container {
 	max-width: var(--max-width);
 	margin: 0 auto;
 	padding: 0px 8px;
 	background-color: var(--bg-color);
+}
+section {
+	margin-bottom: 50px;
 }
 
 // Reset

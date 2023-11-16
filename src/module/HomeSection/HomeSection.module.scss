@@ -11,7 +11,7 @@
 	}
 	.HomeLeftSide {
 		position: relative;
-		height: 600px;
+		height: 100%;
 		width: 50%;
 		border-radius: var(--border-radius);
 		background-color: var(--secondary-color);
@@ -82,7 +82,7 @@
 			background-color: var(--text-color);
 			border-radius: var(--border-radius);
 			color: var(--bg-color);
-			padding: 2rem;
+			padding: 1rem 2rem;
 			.Colume {
 				margin-bottom: 1rem;
 			}
@@ -133,6 +133,7 @@
 			min-height: 700px;
 			.myphoto {
 				height: 100%;
+				width: 500px;
 			}
 		}
 	}
@@ -147,7 +148,8 @@
 			padding: 1rem;
 		}
 		.myphoto {
-			width: 100%;
+			width: 350px !important;
+			height: 450px;
 		}
 
 		.HomeCardListLeft {
@@ -163,7 +165,6 @@
 }
 @media screen and (max-width: 321px) {
 	.myphoto {
-		height: 500px;
 		width: 300px !important;
 	}
 }

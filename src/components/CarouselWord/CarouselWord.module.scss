@@ -1,0 +1,39 @@
+$fontSize: 1rem;
+.CarouselWord {
+	position: relative;
+	width: 100%;
+	text-align: center;
+	font-size: $fontSize;
+	line-height: $fontSize * 1.5;
+	height: $fontSize * 1.5;
+	.change_inner {
+		position: relative;
+		animation: rotate 8s ease-in-out infinite;
+	}
+	@keyframes rotate {
+		0%,
+		20% {
+			transform: translateY(0);
+		}
+		25%,
+		45% {
+			transform: translateY($fontSize * -1.5);
+		}
+		50%,
+		70% {
+			transform: translateY($fontSize * -3);
+		}
+		75%,
+		95% {
+			transform: translateY($fontSize * -4.5);
+		}
+		100% {
+			transform: translateY($fontSize * -6);
+		}
+	}
+	.element {
+		display: block;
+		font-weight: 700;
+		text-shadow: 2px 2px 2px #e67e22;
+	}
+}
