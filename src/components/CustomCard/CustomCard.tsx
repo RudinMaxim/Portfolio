@@ -1,24 +1,13 @@
-import React from 'react';
 import style from './CustomCard.module.scss';
-import CustomLink from '../CustomLink/CustomLink';
-
-interface ILink {
-	url: string;
-	name: string;
-}
 
 interface ICustomCard {
-	text: string;
-	url?: string;
-	texturl?: string;
-	background: 'primary' | 'secondary' | 'bg' | 'none';
+	children: React.ReactNode;
+	background?: 'primary' | 'secondary' | 'bg' | 'none';
 }
 
 export default function CustomCard({
-	text,
-	url,
-	texturl,
-	background,
+	children,
+	background = 'primary',
 }: ICustomCard) {
 	const backgroundClasses = {
 		primary: style.Primary,
@@ -29,11 +18,6 @@ export default function CustomCard({
 	let backgroundClass = backgroundClasses[background] || style.Primary;
 
 	return (
-		<div className={`${style.CustomCard} ${backgroundClass}`}>
-			<p>{text}</p>
-			<CustomLink to={url} background='primary'>
-				{texturl}
-			</CustomLink>
-		</div>
+		<div className={`${style.CustomCard} ${backgroundClass}`}>{children}</div>
 	);
 }

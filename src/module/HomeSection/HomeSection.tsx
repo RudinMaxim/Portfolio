@@ -2,7 +2,7 @@ import React from 'react';
 import style from './HomeSection.module.scss';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
-import { CustomCard, Teg } from '../../components';
+import { CustomCard, CustomLink, Teg } from '../../components';
 import { FaGithub, FaLinkedinIn, FaTelegram } from 'react-icons/fa6';
 
 export default function HomeSection(): React.JSX.Element {
@@ -15,18 +15,15 @@ export default function HomeSection(): React.JSX.Element {
 					<Teg color='secondary' text={p('location')} />
 					<div className={style.myphoto}></div>
 					<div className={style.HomeCardListLeft}>
-						<CustomCard
-							background={'secondary'}
-							text={O('cardCVHome.text')}
-							texturl={O('cardCVHome.urlName')}
-							url='/'
-						/>
-						<CustomCard
-							background={'none'}
-							text={O('cardFormHome.text')}
-							texturl={O('cardFormHome.urlName')}
-							url='/#connect'
-						/>
+						<CustomCard background={'none'}>
+							<p>{O('cardCVHome.text')}</p>
+							<CustomLink to='/'>{O('cardCVHome.urlName')}</CustomLink>
+						</CustomCard>
+
+						<CustomCard background={'none'}>
+							<p>{O('cardFormHome.text')}</p>
+							<CustomLink to='/'>{O('cardFormHome.urlName')}</CustomLink>
+						</CustomCard>
 					</div>
 				</div>
 				<div className={style.HomeRightSide}>

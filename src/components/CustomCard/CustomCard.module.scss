@@ -1,20 +1,19 @@
 .CustomCard {
 	border-radius: var(--border-radius);
-	width: 250px;
-	height: 200px;
+	min-height: 200px;
+	height: 100%;
 	padding: 1rem;
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-between !important;
 	flex-direction: column;
 }
 .Primary {
 	background: var(--primary-color);
-	color: var();
 }
 .Secondary {
 	background: var(--secondary-color);
 }
-.Secondary {
+.bg {
 	background: var(--bg-color);
 }
 .None {

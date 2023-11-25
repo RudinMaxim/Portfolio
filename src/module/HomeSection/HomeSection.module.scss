@@ -76,7 +76,6 @@
 		justify-content: space-between;
 		width: 50%;
 		height: 100%;
-		padding: 0 0.5rem;
 
 		.HomeRightSideAbout {
 			background-color: var(--text-color);
@@ -121,6 +120,7 @@
 }
 @media screen and (max-width: 769px) {
 	.HomeSection {
+		height: 100%;
 		h1 {
 			text-align: center;
 		}
