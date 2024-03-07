@@ -1,5 +1,5 @@
-import { BASE_URL } from '@/lib/constants/url';
 import { MetadataRoute } from 'next';
+import { BASE_URL } from '../lib/constants/url';
 
 export default function sitemap(): MetadataRoute.Sitemap {
 	return [
