@@ -5,7 +5,7 @@ import { Container, Logo, ThemeButton } from '../index';
 import style from './Header.module.scss';
 import { SelectLeng } from './components';
 
-export default function Header(): React.JSX.Element {
+export function Header(): React.JSX.Element {
 	const w = useTranslations('Components');
 
 	return (

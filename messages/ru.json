@@ -15,6 +15,9 @@
 	"Components": {
 		"header": {
 			"project": "Проекты"
+		},
+		"footer": {
+			"Copyright": "Все права защищены"
 		}
 	},
 	"Other": {

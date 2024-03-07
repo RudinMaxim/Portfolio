@@ -32,6 +32,7 @@ html {
 	color: var(--text-color);
 	background: var(--bg-color);
 	scroll-behavior: smooth;
+	transition: background-color 220ms linear;
 }
 
 body {

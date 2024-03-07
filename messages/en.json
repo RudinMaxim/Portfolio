@@ -15,6 +15,9 @@
 	"Components": {
 		"header": {
 			"project": "Projects"
+		},
+		"footer": {
+			"Copyright": "All rights reserved"
 		}
 	},
 
