@@ -1,6 +1,7 @@
 {
 	"Profile": {
-		"name": "Maksim Rudin",
+		"first_name": "Maksim",
+		"last_name": "Rudin",
 		"location": "Russia, Perm",
 		"shortAboutme": {
 			"title": "About me",
@@ -11,8 +12,13 @@
 			"text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, amet neque. Eligendi dolorem assumenda eum corporis, earum at necessitatibus aperiam voluptate iusto minus eveniet doloribus, dolore ipsa, illum est eos?"
 		}
 	},
+	"Components": {
+		"header": {
+			"project": "Projects"
+		}
+	},
+
 	"Other": {
-		"project": "Projects",
 		"titleHome": "My name is Maksim Rudin, Full Stack developer.",
 		"cardCVHome": {
 			"text": "Do you want to hire me? Download the resume in PDF.",

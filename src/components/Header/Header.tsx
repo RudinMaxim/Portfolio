@@ -1,18 +1,23 @@
-import React from 'react';
-import style from './Header.module.scss';
-import { Logo, CustomLink } from '../index';
 import { useTranslations } from 'next-intl';
-import SelectLeng from './components/SelectLeng';
+import React from 'react';
+import { ButtonLink } from '../../ui';
+import { Container, Logo, ThemeButton } from '../index';
+import style from './Header.module.scss';
+import { SelectLeng } from './components';
 
 export default function Header(): React.JSX.Element {
-	const w = useTranslations('Other');
+	const w = useTranslations('Components');
+
 	return (
-		<header className={`${style.Header} container`}>
-			<Logo />
-			<div className={style.RightSide}>
-				<SelectLeng />
-				<CustomLink to={'/project'}>{w('project')}</CustomLink>
-			</div>
-		</header>
+		<Container>
+			<header className={style.Header}>
+				<Logo />
+				<div className={style.RightSide}>
+					<SelectLeng />
+					<ThemeButton />
+					<ButtonLink href={'project'}>{w('header.project')}</ButtonLink>
+				</div>
+			</header>
+		</Container>
 	);
 }

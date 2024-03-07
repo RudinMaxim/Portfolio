@@ -1,16 +1,12 @@
-import React from 'react';
-import style from './HomeSection.module.scss';
-import Link from 'next/link';
 import { useTranslations } from 'next-intl';
-import { CustomCard, CustomLink, Teg } from '../../components';
-import { FaGithub, FaLinkedinIn, FaTelegram } from 'react-icons/fa6';
+import React from 'react';
 
-export default function HomeSection(): React.JSX.Element {
+export function Heroes(): React.JSX.Element {
 	const p = useTranslations('Profile');
 	const O = useTranslations('Other');
 	return (
 		<div className='container'>
-			<section className={`${style.HomeSection}`}>
+			{/* <section className={`${style.HomeSection}`}>
 				<div className={style.HomeLeftSide}>
 					<Teg color='secondary' text={p('location')} />
 					<div className={style.myphoto}></div>
@@ -29,7 +25,7 @@ export default function HomeSection(): React.JSX.Element {
 				<div className={style.HomeRightSide}>
 					<h1>
 						{O('titleHome')}
-						{/* <CarouselWord pre={O('titleHome')} /> */}
+						<CarouselWord pre={O('titleHome')} />
 					</h1>
 
 					<div className={style.HomeRightSideAbout}>
@@ -60,7 +56,7 @@ export default function HomeSection(): React.JSX.Element {
 						</div>
 					</div>
 				</div>
-			</section>
+			</section> */}
 		</div>
 	);
 }
