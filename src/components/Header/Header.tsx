@@ -15,7 +15,7 @@ export default function Header(): React.JSX.Element {
 				<div className={style.RightSide}>
 					<SelectLeng />
 					<ThemeButton />
-					<ButtonLink href={'project'}>{w('header.project')}</ButtonLink>
+					<ButtonLink href={'/project'}>{w('header.project')}</ButtonLink>
 				</div>
 			</header>
 		</Container>

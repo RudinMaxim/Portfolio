@@ -1,5 +1,6 @@
+import Link from 'next-intl/link';
+// import Link from 'next/link';
 import Image from 'next/image';
-import Link from 'next/link';
 import { FaCircleArrowRight } from 'react-icons/fa6';
 import style from './Button.module.scss';
 
