@@ -1,23 +1,26 @@
 'use client';
-import Link from 'next-intl/link';
 import { useLocale } from 'next-intl';
+import Link from 'next-intl/link';
 import React from 'react';
 
-export default function SelectLeng(): React.JSX.Element {
+export function SelectLeng(): React.JSX.Element {
 	const locale = useLocale();
-	console.log(locale);
 
 	return (
-		<>
-			{locale === 'en' ? (
+		<div
+			style={{
+				fontWeight: 600,
+			}}>
+			{locale === 'en' && (
 				<Link href='/' locale='ru'>
 					ru
 				</Link>
-			) : (
+			)}
+			{locale !== 'en' && (
 				<Link href={'/'} locale='en'>
 					en
 				</Link>
 			)}
-		</>
+		</div>
 	);
 }

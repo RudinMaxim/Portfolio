@@ -1,0 +1,25 @@
+.input {
+	input {
+		width: 100%;
+		font-weight: 400;
+		color: var(--text-color);
+		background-color: var(--bg-color);
+		border-radius: 0.5rem;
+		border: 2px solid #ccc;
+		font-size: 1rem;
+		box-sizing: border-box;
+		padding: 0.5rem 0.75rem;
+	}
+	.label {
+		margin-bottom: 0.25rem;
+		color: var(--text-color);
+		display: flex;
+		justify-content: space-between;
+	}
+}
+
+.error {
+	input {
+		border: 2px solid red;
+	}
+}

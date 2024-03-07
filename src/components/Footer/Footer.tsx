@@ -1,7 +1,7 @@
-import React from 'react';
-import style from './Footer.module.scss';
-import { getCurrentYear } from '../../lib/utils';
 import Link from 'next/link';
+import React from 'react';
+import { getCurrentYear } from '../../lib/utils/utils';
+import style from './Footer.module.scss';
 
 export default function Footer(): React.JSX.Element {
 	const year: string = getCurrentYear().toString();
