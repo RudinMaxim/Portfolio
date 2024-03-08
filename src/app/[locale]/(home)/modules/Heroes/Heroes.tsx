@@ -35,6 +35,23 @@ export function Heroes(): React.JSX.Element {
 							</ButtonLink>
 						</CustomCard>
 					</div>
+
+					{/* <div className={style.heroes_card_list_left}>
+						<CustomCard background={'secondary'}>
+							<ButtonLink
+								href='https://docs.google.com/document/d/1v0XOOiloew5vuFW8N3tU65sdKkOmjZ7vUfGgnNhNYP4/edit?usp=sharing'
+								target='_blank'>
+								{Page('Heroes.cardCV.urlName')}
+							</ButtonLink>
+						</CustomCard>
+
+						<CustomCard background={'secondary'}>
+							<p>{Page('Heroes.cardForm.text')}</p>
+							<ButtonLink href='/'>
+								{Page('Heroes.cardForm.urlName')}
+							</ButtonLink>
+						</CustomCard>
+					</div> */}
 				</div>
 				<div className={style.heroes_right_side}>
 					<h1>{Page('Heroes.title')}</h1>

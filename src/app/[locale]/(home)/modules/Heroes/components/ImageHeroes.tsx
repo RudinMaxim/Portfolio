@@ -1,11 +1,7 @@
-'use client';
 import Image from 'next/image';
 import style from '../Heroes.module.scss';
 
 export function ImageHeroes({ name }: { name: string }) {
-	// const { windowSize } = useWindowSize();
-	// const isMobile = windowSize.width < 768;
-
 	return (
 		<Image
 			src={'/myphoto.png'}
