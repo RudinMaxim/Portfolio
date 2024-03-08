@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next';
-import { BASE_URL } from '../../lib/constants/url';
+import { BASE_URL } from '../lib/constants/url';
 
 export default function manifest(): MetadataRoute.Manifest {
 	return {

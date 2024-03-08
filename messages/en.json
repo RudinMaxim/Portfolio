@@ -8,8 +8,7 @@
 			"text": "I am a Full Stack developer with over 2 years of experience. I have worked both in businesses and as a freelancer. My specialization is in developing web applications using React.ts and writing RESTful APIs in Go. Additionally, I have experience in cybersecurity, being able to protect web applications from various threats and attacks. My English language skills are at a level where I can read documentation effectively."
 		},
 		"shortSkills": {
-			"title": "My skills",
-			"text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, amet neque. Eligendi dolorem assumenda eum corporis, earum at necessitatibus aperiam voluptate iusto minus eveniet doloribus, dolore ipsa, illum est eos?"
+			"title": "My skills"
 		}
 	},
 	"Components": {

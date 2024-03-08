@@ -1,4 +1,5 @@
 import { ImageHeroes } from './ImageHeroes';
+import { SkillsList } from './SkillsList';
 import { SocialLinks } from './SocialLinks';
 
-export { ImageHeroes, SocialLinks };
+export { ImageHeroes, SkillsList, SocialLinks };
