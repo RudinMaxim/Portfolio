@@ -1,50 +1,116 @@
 .heroes {
 	margin: 0.5rem;
 	display: flex;
-	justify-content: space-evenly;
 	gap: 1rem;
-	width: 100%;
-	height: 60dvh;
-
-	h1 {
-		font-size: 2.5rem;
-		text-align: justify;
-		margin-bottom: 0.5rem;
-	}
+	font-size: 1rem;
 
 	.heroes_left_side {
 		position: relative;
 		border-radius: var(--border-radius);
-		background-color: var(--secondary-color);
+		background: var(--secondary-color);
 		padding: 1rem 2rem;
 		display: flex;
 		justify-content: space-between;
 		flex-direction: column;
 		width: 100%;
-
-		.my_photo {
-			position: absolute;
-			width: min-content;
-			margin: 0 auto;
-			right: 0;
-			left: 0;
-			object-fit: cover;
-			object-position: 50% 50%;
-		}
+		height: 80dvh;
 
 		.heroes_card_list_left {
-			display: flex !important;
+			display: flex;
 			align-items: center;
+			justify-content: space-between;
 			gap: 1rem;
 		}
 	}
 
 	.heroes_right_side {
+		text-align: justify;
 		display: flex;
-		flex-direction: column;
 		justify-content: space-between;
+		flex-direction: column;
+
 		width: 100%;
 		max-width: 50%;
+		min-height: 100%;
+		padding: 0.5rem;
+
+		h1 {
+			font-size: 2.5rem;
+		}
+
+		.heroes_right_side_list {
+			color: var(--text-color);
+			background-color: var(--secondary-color);
+			border-radius: var(--border-radius);
+			padding: 1rem 2rem;
+
+			.heroes_right_side_list_colume {
+				h3 {
+					margin-bottom: 0.5rem;
+					font-size: 1.5rem;
+				}
+				p {
+					margin-bottom: 1rem;
+					font-weight: 500;
+				}
+			}
+		}
+	}
+}
+.my_photo {
+	position: absolute;
+	margin: 0 auto;
+	right: 0;
+	left: 0;
+	max-width: 100%;
+	object-fit: cover;
+	user-drag: none;
+	-webkit-user-drag: none;
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+}
+
+.SocialLinks {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	display: flex;
+	flex-direction: column;
+	font-size: 2rem;
+	gap: 0.5rem;
+	transition: var(--transition);
+}
+
+@media screen and (max-width: 1220px) {
+	.heroes {
+		flex-direction: column;
 		height: 100%;
+
+		h1 {
+			text-align: center;
+			margin-bottom: 1rem;
+		}
+
+		.heroes_right_side {
+			max-width: 100%;
+		}
+		.my_photo {
+			width: 400 !important;
+			height: 600 !important;
+		}
+	}
+}
+
+@media screen and (max-width: 558px) {
+	.heroes {
+		.heroes_left_side {
+			padding: 0.5rem 1rem;
+		}
+		.heroes_card_list_left {
+			flex-direction: column;
+			min-height: 150px !important;
+		}
 	}
 }

@@ -20,9 +20,10 @@
 			"Copyright": "All rights reserved"
 		}
 	},
+
 	"Page": {
 		"Heroes": {
-			"title": "My name is , Full Stack developer.",
+			"title": "My name is Maksim Rudin, Full Stack developer.",
 			"cardCV": {
 				"text": "Do you want to hire me? Download the resume in PDF.",
 				"urlName": "CV"

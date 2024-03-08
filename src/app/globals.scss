@@ -13,7 +13,7 @@
 
 [data-theme='dark'] {
 	--primary-color: #c3b1a4;
-	--secondary-color: #f0f1f3;
+	--secondary-color: #2e2f31;
 	--bg-color: #202124;
 	--text-color: #f8f9fa;
 }
@@ -40,10 +40,10 @@ html {
 	-webkit-transition: background-color 220ms linear;
 	-o-transition: background-color 220ms linear;
 	transition: background-color 220ms linear;
+	overflow-x: hidden;
 }
 
 body {
-	overflow: hidden;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
