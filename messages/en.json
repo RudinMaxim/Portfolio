@@ -5,7 +5,7 @@
 		"location": "Russia, Perm",
 		"shortAboutme": {
 			"title": "About me",
-			"text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, amet neque. Eligendi dolorem assumenda eum corporis, earum at necessitatibus aperiam voluptate iusto minus eveniet doloribus, dolore ipsa, illum est eos?"
+			"text": "I am a Full Stack developer with over 2 years of experience. I have worked both in businesses and as a freelancer. My specialization is in developing web applications using React.ts and writing RESTful APIs in Go. Additionally, I have experience in cybersecurity, being able to protect web applications from various threats and attacks. My English language skills are at a level where I can read documentation effectively."
 		},
 		"shortSkills": {
 			"title": "My skills",
@@ -15,18 +15,23 @@
 	"Components": {
 		"header": {
 			"project": "Projects"
+		},
+		"footer": {
+			"Copyright": "All rights reserved"
 		}
 	},
 
-	"Other": {
-		"titleHome": "My name is Maksim Rudin, Full Stack developer.",
-		"cardCVHome": {
-			"text": "Do you want to hire me? Download the resume in PDF.",
-			"urlName": "CV"
-		},
-		"cardFormHome": {
-			"text": "Do you want me to help you? Go to the communication form!",
-			"urlName": "Contact"
+	"Page": {
+		"Heroes": {
+			"title": "My name is Maksim Rudin, Full Stack developer.",
+			"cardCV": {
+				"text": "Do you want to hire me? Download the resume in PDF.",
+				"urlName": "CV"
+			},
+			"cardForm": {
+				"text": "Do you want me to help you? Go to the communication form!",
+				"urlName": "Contact"
+			}
 		}
 	}
 }

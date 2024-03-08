@@ -1,11 +1,20 @@
 .Logo {
 	text-transform: uppercase;
-	h4 {
-		font-size: 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	white-space: nowrap;
+	font-weight: 600;
+	b {
+		display: none;
 	}
+
 	@media screen and (max-width: 420px) {
 		span {
 			display: none;
+		}
+		b {
+			display: block;
 		}
 	}
 }

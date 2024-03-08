@@ -1,10 +1,10 @@
 import CarouselWord from './CarouselWord/CarouselWord';
 import { Container } from './Container/Container';
 import CustomCard from './CustomCard/CustomCard';
-import Footer from './Footer/Footer';
-import Header from './Header/Header';
+import { Footer } from './Footer/Footer';
+import { Header } from './Header/Header';
 import Loader from './Loader/Loader';
-import Logo from './Logo/Logo';
+import { Logo } from './Logo/Logo';
 import { ThemeButton } from './ThemeButton/ThemeButton';
 
 export {

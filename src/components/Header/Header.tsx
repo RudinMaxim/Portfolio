@@ -5,14 +5,14 @@ import { Container, Logo, ThemeButton } from '../index';
 import style from './Header.module.scss';
 import { SelectLeng } from './components';
 
-export default function Header(): React.JSX.Element {
+export function Header(): React.JSX.Element {
 	const w = useTranslations('Components');
 
 	return (
 		<Container>
-			<header className={style.Header}>
+			<header className={style.header}>
 				<Logo />
-				<div className={style.RightSide}>
+				<div className={style.header_side}>
 					<SelectLeng />
 					<ThemeButton />
 					<ButtonLink href={'/project'}>{w('header.project')}</ButtonLink>
