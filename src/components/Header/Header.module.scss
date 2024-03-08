@@ -1,18 +1,30 @@
-.Header {
+.header {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
 	justify-content: space-between;
 	margin: 0.5rem;
 
-	.RightSide {
+	.header_side {
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
 		align-items: center;
+		-webkit-box-pack: justify;
+		-ms-flex-pack: justify;
 		justify-content: space-between;
 		gap: 0.75rem;
 	}
 
 	@media screen and (max-width: 420px) {
-		.RightSide {
+		.header_side {
 			gap: 0.5;
 		}
 	}

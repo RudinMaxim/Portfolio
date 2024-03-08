@@ -6,6 +6,8 @@
 	display: flex;
 	justify-content: space-between !important;
 	flex-direction: column;
+	z-index: 100;
+	box-shadow: var(--box-shadow);
 }
 .Primary {
 	background: var(--primary-color);
@@ -14,7 +16,7 @@
 	background: var(--secondary-color);
 }
 .bg {
-	background: var(--bg-color);
+	background: var(--text-color);
 }
 .None {
 	background: linear-gradient(

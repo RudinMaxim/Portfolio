@@ -1,11 +1,21 @@
 .Button {
+	max-width: -webkit-max-content;
+	max-width: -moz-max-content;
 	max-width: max-content;
+	height: -webkit-fit-content;
+	height: -moz-fit-content;
 	height: fit-content;
 	font-weight: 600;
 	font-size: 1rem;
 	font-style: normal;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
 	justify-content: center;
 	gap: 0.5rem;
 	color: var(--bg-color);
@@ -13,6 +23,7 @@
 	padding: 0.75rem 1.5rem;
 	cursor: pointer;
 	border-radius: var(--border-radius);
+	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 	&[disabled] {
 		opacity: 0.5;
@@ -21,8 +32,14 @@
 }
 
 .ButtonIcon {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
 	justify-content: center;
 	cursor: pointer;
 	background: transparent;
@@ -33,9 +50,17 @@
 }
 
 .ButtonLink {
+	max-width: -webkit-max-content;
+	max-width: -moz-max-content;
 	max-width: max-content;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
 	justify-content: center;
 	padding: 0.5rem;
 	border-radius: var(--border-radius);
@@ -47,7 +72,11 @@
 	z-index: 500;
 	color: var(--bg-color);
 	svg {
+		-webkit-transition: var(--transition);
+		-o-transition: var(--transition);
 		transition: var(--transition);
+		-webkit-transform: rotate(320deg);
+		-ms-transform: rotate(320deg);
 		transform: rotate(320deg);
 		height: 25px;
 		width: 25px;
@@ -55,6 +84,8 @@
 	&:hover,
 	&:focus {
 		svg {
+			-webkit-transform: rotate(360deg);
+			-ms-transform: rotate(360deg);
 			transform: rotate(360deg);
 		}
 	}

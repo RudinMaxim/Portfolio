@@ -10,9 +10,9 @@ export function Header(): React.JSX.Element {
 
 	return (
 		<Container>
-			<header className={style.Header}>
+			<header className={style.header}>
 				<Logo />
-				<div className={style.RightSide}>
+				<div className={style.header_side}>
 					<SelectLeng />
 					<ThemeButton />
 					<ButtonLink href={'/project'}>{w('header.project')}</ButtonLink>
