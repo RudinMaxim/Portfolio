@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Montserrat } from 'next/font/google';
 import { Footer, Header } from '../../components';
+import '../../lib/utils/env';
 import { getMetadata } from '../../lib/utils/getMetadata';
 import '../globals.scss';
 

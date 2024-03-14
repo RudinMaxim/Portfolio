@@ -1,0 +1,56 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum ProjectType {
+  PERSONAL
+  COMMERCIAL
+}
+
+model Project {
+  id           String       @id @default(uuid())
+  name         String
+  description  String
+  tag          ProjectType  @default(PERSONAL)
+  links        String[]
+  technologies Technology[]
+  start        DateTime
+  end          DateTime?
+  createdAt    DateTime     @default(now())
+  updatedAt    DateTime     @updatedAt
+  Module       Module[]
+
+  @@index([name], name: "project_name_idx")
+  @@map("projects")
+}
+
+model Technology {
+  id          String    @id @default(uuid())
+  name        String    @unique
+  versions    String?
+  description String?
+  projects    Project[]
+  modules     Module[]
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  @@map("technologies")
+}
+
+model Module {
+  id           String     @id @default(uuid())
+  name         String
+  technologyId String
+  technology   Technology @relation(fields: [technologyId], references: [id])
+  project      Project?   @relation(fields: [projectId], references: [id])
+  projectId    String?
+  createdAt    DateTime   @default(now())
+  updatedAt    DateTime   @updatedAt
+
+  @@map("modules")
+}

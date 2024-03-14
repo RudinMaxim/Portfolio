@@ -1,14 +1,16 @@
 {
 	"name": "portfolio",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"private": true,
 	"scripts": {
 		"dev": "next dev",
 		"build": "next build",
 		"start": "next start",
-		"lint": "next lint"
+		"lint": "next lint",
+		"migrate": "prisma migrate dev --name init"
 	},
 	"dependencies": {
+		"@prisma/client": "^5.11.0",
 		"@types/node": "20.6.2",
 		"@types/react": "18.2.21",
 		"@types/react-dom": "18.2.7",
@@ -19,10 +21,16 @@
 		"react": "18.2.0",
 		"react-dom": "18.2.0",
 		"react-icons": "^4.11.0",
-		"react-responsive": "^9.0.2",
 		"sass": "^1.67.0",
-		"swiper": "^11.0.5",
 		"typescript": "5.2.2",
-		"zustand": "^4.5.2"
+		"zod": "^3.22.4"
+	},
+	"description": "This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).",
+	"main": "next.config.js",
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"prisma": "^5.11.0"
 	}
 }
