@@ -1,28 +1,27 @@
-import { z } from 'zod';
+// import { z } from 'zod';
 
-const envSchema = z.object({
-	DATABASE_URL: z.string(),
-	BASE_URL: z.string(),
-});
+// const envSchema = z.object({
+// 	DATABASE_URL: z.string(),
+// 	BASE_URL: z.string(),
+// });
 
-const { DATABASE_URL, BASE_URL } = process.env;
+// const { DATABASE_URL, BASE_URL } = process.env;
 
-const envServerSchema = envSchema.safeParse({ DATABASE_URL, BASE_URL });
+// const envServerSchema = envSchema.safeParse({ DATABASE_URL, BASE_URL });
 
-if (!envServerSchema.success) {
-	console.error(envServerSchema.error.issues);
+// if (!envServerSchema.success) {
+// 	// @ts-check
+// 	console.error(envServerSchema.error.issues);
 
-	throw new Error(
-		`Environment variables are not correct: ${envServerSchema.error}`
-	);
-}
+// 	throw new Error(`Environment variables are not correct: ${envServerSchema}`);
+// }
 
-export const envVariablesData = envServerSchema.data;
+// export const envVariablesData = envServerSchema.data;
 
-type EnvVariablesType = z.infer<typeof envSchema>;
+// type EnvVariablesType = z.infer<typeof envSchema>;
 
-declare global {
-	namespace NodeJS {
-		interface ProcessEnv extends EnvVariablesType {}
-	}
-}
+// declare global {
+// 	namespace NodeJS {
+// 		interface ProcessEnv extends EnvVariablesType {}
+// 	}
+// }

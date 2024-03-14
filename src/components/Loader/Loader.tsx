@@ -7,9 +7,6 @@ export default function Loader() {
 				<div className={style.circle}></div>
 				<div className={style.circle}></div>
 				<div className={style.circle}></div>
-				<div className={style.shadow}></div>
-				<div className={style.shadow}></div>
-				<div className={style.shadow}></div>
 			</div>
 		</div>
 	);

@@ -7,9 +7,17 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+// npx prisma migrate dev --name init
+
 enum ProjectType {
   PERSONAL
   COMMERCIAL
+}
+
+enum Direction {
+  FRONTEND
+  BACKEND
+  DEVOPS
 }
 
 model Project {
@@ -23,26 +31,28 @@ model Project {
   end          DateTime?
   createdAt    DateTime     @default(now())
   updatedAt    DateTime     @updatedAt
-  Module       Module[]
+  Module       Libraries[]
 
   @@index([name], name: "project_name_idx")
   @@map("projects")
 }
 
 model Technology {
-  id          String    @id @default(uuid())
-  name        String    @unique
-  versions    String?
+  id          String      @id @default(uuid())
+  name        String      @unique
   description String?
+  versions    String?
+  direction   Direction   @default(FRONTEND)
   projects    Project[]
-  modules     Module[]
-  createdAt   DateTime  @default(now())
-  updatedAt   DateTime  @updatedAt
+  modules     Libraries[]
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
 
+  @@index([name], name: "technologies_name_idx")
   @@map("technologies")
 }
 
-model Module {
+model Libraries {
   id           String     @id @default(uuid())
   name         String
   technologyId String
@@ -52,5 +62,6 @@ model Module {
   createdAt    DateTime   @default(now())
   updatedAt    DateTime   @updatedAt
 
-  @@map("modules")
+  @@index([name], name: "libraries_name_idx")
+  @@map("libraries")
 }

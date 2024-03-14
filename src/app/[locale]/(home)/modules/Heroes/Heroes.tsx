@@ -8,6 +8,7 @@ import { ImageHeroes, SkillsList, SocialLinks } from './components';
 export function Heroes(): React.JSX.Element {
 	const Page = useTranslations('Page');
 	const Profile = useTranslations('Profile');
+
 	return (
 		<Container>
 			<section className={style.heroes}>
@@ -41,11 +42,11 @@ export function Heroes(): React.JSX.Element {
 
 					<div className={style.heroes_right_side_list}>
 						<div className={style.heroes_right_side_list_colume}>
-							<h3>{Profile('shortAboutme.title')}</h3>
+							<h2>{Profile('shortAboutme.title')}</h2>
 							<p>{Profile('shortAboutme.text')}</p>
 						</div>
 						<div className={style.heroes_right_side_list_colume}>
-							<h3>{Profile('shortSkills.title')}</h3>
+							<h2>{Profile('shortSkills.title')}</h2>
 							<SkillsList />
 						</div>
 					</div>

@@ -53,11 +53,12 @@ interface IButtonLink {
 	children: React.ReactNode;
 	href: string;
 	target?: '_blank' | '_parent' | '_self' | '_top';
+	[key: string]: any;
 }
 
 export function ButtonLink({ children, href, target = '_self' }: IButtonLink) {
 	return (
-		<Link href={href} className={style.ButtonLink} target={target}>
+		<Link href={href} className={style.ButtonLink} target={target} locale=''>
 			<span>{children}</span>
 			<FaCircleArrowRight />
 		</Link>

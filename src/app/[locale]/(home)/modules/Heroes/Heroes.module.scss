@@ -55,7 +55,6 @@
 		max-width: 50%;
 		min-height: 100%;
 		height: 100%;
-		padding: 0.5rem;
 
 		h1 {
 			font-size: 2.5rem;
@@ -69,7 +68,7 @@
 			text-align: justify;
 
 			.heroes_right_side_list_colume {
-				h3 {
+				h2 {
 					margin-bottom: 0.5rem;
 					font-size: 1.75rem;
 				}
@@ -81,6 +80,7 @@
 		}
 	}
 }
+
 .my_photo {
 	position: absolute;
 	margin: 0 auto;
@@ -122,8 +122,27 @@
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
-
 	gap: 0.5rem;
+}
+.SkillsListSkeleton {
+	background: linear-gradient(
+			100deg,
+			rgba(255, 255, 255, 0.5) 40%,
+			rgba(255, 255, 255, 0) 50%,
+			rgba(255, 255, 255, 0.5) 60%
+		)
+		var(--secondary-color);
+	background-size: 200% 100%;
+	background-position-x: 180%;
+	animation: 1.5s loading ease-in-out infinite;
+	height: 150px;
+	border-radius: 10px;
+}
+
+@keyframes loading {
+	to {
+		background-position-x: -20%;
+	}
 }
 
 @media screen and (max-width: 1220px) {
