@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { Technology } from '../../app/api/technologies/route';
+import { Technology } from '../../app/api/technologies/schema';
 import { BASE_URL } from '../constants/url';
 
 export const getTechnologies = async () => {

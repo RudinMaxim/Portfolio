@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import { getTechnologies } from '../../../../../lib/api/getTechnologies';
-import { Technology } from '../../../../api/technologies/route';
+import { Technology } from '../../../../api/technologies/schema';
 
 interface IHeroes {
-	technologies: Technology[];
+	technologies: Technology[] | null;
 	isLoading: boolean;
 }
 

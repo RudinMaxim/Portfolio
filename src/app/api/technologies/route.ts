@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
 import prisma from '../../../../prisma/client';
+import { handleError } from '../../../lib/utils/handleError';
 import {
 	DeleteTechnologySchema,
 	TechnologiesSchema,
@@ -9,7 +10,7 @@ import {
 	createTechnologiesSchema,
 } from './schema';
 
-export async function GET() {
+export async function GET(): Promise<NextResponse> {
 	try {
 		const technologies = await prisma.technology.findMany({
 			orderBy: {
@@ -27,43 +28,21 @@ export async function GET() {
 		});
 
 		const parsedTechnologies: Technology[] =
-			TechnologiesSchema.parse(technologies);
+			await TechnologiesSchema.parseAsync(technologies);
 
 		return NextResponse.json(parsedTechnologies);
 	} catch (error) {
-		console.error('Error fetching technologies:', error);
-		return NextResponse.json(
-			{ error: 'Failed to fetch technologies' },
-			{ status: 500 }
-		);
+		if (error instanceof z.ZodError) {
+			return NextResponse.json({ errors: error.issues }, { status: 400 });
+		}
+		return handleError(error, 'Failed to fetch technologies');
 	}
 }
 
-export async function DELETE(request: NextRequest) {
+export async function POST(request: NextRequest): Promise<NextResponse> {
 	try {
-		const { id } = DeleteTechnologySchema.parse(await request.json());
-
-		const deletedTechnology = await prisma.technology.delete({
-			where: {
-				id,
-			},
-		});
-
-		return NextResponse.json(deletedTechnology);
-	} catch (error) {
-		console.error('Error deleting technology:', error);
-		return NextResponse.json(
-			{ error: 'Failed to delete technology' },
-			{ status: 500 }
-		);
-	}
-}
-
-export async function POST(request: NextRequest) {
-	try {
-		const { name, description, versions } = createTechnologiesSchema.parse(
-			await request.json()
-		);
+		const { name, description, versions } =
+			await createTechnologiesSchema.parseAsync(request.json());
 
 		const newProject = await prisma.technology.createMany({
 			data: {
@@ -75,22 +54,38 @@ export async function POST(request: NextRequest) {
 
 		return NextResponse.json(newProject);
 	} catch (error) {
-		console.error('Error creating technology:', error);
-
 		if (error instanceof z.ZodError) {
 			return NextResponse.json({ errors: error.issues }, { status: 400 });
 		}
 
-		return NextResponse.json(
-			{ error: 'Failed to create technology' },
-			{ status: 500 }
-		);
+		return handleError(error, 'Failed to create technology');
 	}
 }
 
-export async function PUT(request: NextRequest) {
+export async function DELETE(request: NextRequest): Promise<NextResponse> {
 	try {
-		const { id, ...data } = UpdateTechnologySchema.parse(await request.json());
+		const { id } = await DeleteTechnologySchema.parseAsync(request.json());
+
+		const deletedTechnology = await prisma.technology.delete({
+			where: {
+				id,
+			},
+		});
+
+		return NextResponse.json(deletedTechnology);
+	} catch (error) {
+		if (error instanceof z.ZodError) {
+			return NextResponse.json({ errors: error.issues }, { status: 400 });
+		}
+		return handleError(error, 'Failed to delete technology');
+	}
+}
+
+export async function PUT(request: NextRequest): Promise<NextResponse> {
+	try {
+		const { id, ...data } = await UpdateTechnologySchema.parseAsync(
+			await request.json()
+		);
 
 		const updatedTechnology = await prisma.technology.update({
 			where: {
@@ -101,10 +96,9 @@ export async function PUT(request: NextRequest) {
 
 		return NextResponse.json(updatedTechnology);
 	} catch (error) {
-		console.error('Error updating technology:', error);
-		return NextResponse.json(
-			{ error: 'Failed to update technology' },
-			{ status: 500 }
-		);
+		if (error instanceof z.ZodError) {
+			return NextResponse.json({ errors: error.issues }, { status: 400 });
+		}
+		return handleError(error, 'Failed to update technology');
 	}
 }

@@ -6,7 +6,7 @@ import style from '../Heroes.module.scss';
 export function SkillsList() {
 	const { technologies } = useHeroes();
 
-	if (!technologies.length) {
+	if (!technologies || !technologies.length) {
 		return <SkillsListSkeleton />;
 	}
 
