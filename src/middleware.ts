@@ -5,6 +5,7 @@ export default createMiddleware({
 	locales,
 	defaultLocale,
 });
+
 export const config = {
 	matcher: ['/', '/(ru|en)/:path*'],
 };

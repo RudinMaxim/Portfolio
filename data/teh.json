@@ -1,0 +1,78 @@
+[
+	{
+		"name": "Next.js",
+		"description": "The React Framework for Production",
+		"versions": "latest",
+		"direction": "FRONTEND"
+	},
+	{
+		"name": "TypeScript",
+		"description": "Typed superset of JavaScript",
+		"versions": "latest",
+		"direction": "FRONTEND"
+	},
+	{
+		"name": "React",
+		"description": "A JavaScript library for building user interfaces",
+		"versions": "latest",
+		"direction": "FRONTEND"
+	},
+	{
+		"name": "Prisma",
+		"versions": "latest",
+		"direction": "FRONTEND"
+	},
+	{
+		"name": "Zustand",
+		"description": "A small, fast and scalable state management solution for React",
+		"versions": "latest",
+		"direction": "FRONTEND"
+	},
+
+	{
+		"name": "SCSS",
+		"description": "CSS preprocessor that allows for variables, nesting, and more",
+		"versions": "latest",
+		"direction": "FRONTEND"
+	},
+	{
+		"name": "Golang",
+		"description": "An open source programming language",
+		"versions": "latest",
+		"direction": "BACKEND"
+	},
+
+	{
+		"name": "SQL",
+		"description": "Structured Query Language for relational databases",
+		"versions": "latest",
+		"direction": "BACKEND"
+	},
+	{
+		"name": "Linux",
+		"description": "Open-source operating system",
+		"versions": "latest",
+		"direction": "DEVOPS"
+	},
+
+	{
+		"name": "Docker",
+		"description": "Platform for building, deploying, and running applications in containers",
+		"versions": "latest",
+		"direction": "DEVOPS"
+	},
+
+	{
+		"name": "Git",
+		"description": "Distributed version control system",
+		"versions": "latest",
+		"direction": "DEVOPS"
+	},
+
+	{
+		"name": "Nginx",
+		"description": "Web server and reverse proxy",
+		"versions": "latest",
+		"direction": "DEVOPS"
+	}
+]
