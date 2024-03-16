@@ -1,10 +1,14 @@
-import { About, Heroes } from './modules';
+import { Container } from '../../../components';
+import { About, Connect, Heroes } from './modules';
 
 export default function page() {
 	return (
 		<main>
-			<Heroes />
-			<About />
+			<Container>
+				<Heroes />
+				<About />
+				<Connect />
+			</Container>
 		</main>
 	);
 }

@@ -6,9 +6,6 @@
 		"shortAboutme": {
 			"title": "About me",
 			"text": "I am a developer with more than 2 years of experience in commercial development, specializing in web applications in React and RESTful API in Go. I also have DevOps skills, including experience with containerization and security."
-		},
-		"shortSkills": {
-			"title": "Basic Skills"
 		}
 	},
 	"Components": {
@@ -30,7 +27,13 @@
 			"cardForm": {
 				"text": "Do you want me to help you? Go to the communication form!",
 				"urlName": "Contact"
+			},
+			"shortSkills": {
+				"title": "Main Skills"
 			}
+		},
+		"Connect": {
+			"title": "Связаться"
 		}
 	}
 }
