@@ -1,25 +1,42 @@
 import { useEffect, useState } from 'react';
-import { getTechnologies } from '../../../../../lib/api/getTechnologies';
+import { getSkills } from '../../../../../lib/api/getSkills';
+import { Library } from '../../../../api/libraries/schema';
 import { Technology } from '../../../../api/technologies/schema';
 
 interface IHeroes {
-	technologies: Technology[] | null;
-	isLoading: boolean;
+	skills: Technology[] | null;
 }
 
 export const useHeroes = (): IHeroes => {
-	const [technologies, setTechnologies] = useState<Technology[]>([]);
-	const [isLoading, setIsLoading] = useState<boolean>(false);
+	const [skills, setSkills] = useState<
+		(Technology & { libraries?: Library[] })[]
+	>([]);
 
 	useEffect(() => {
-		getTechnologies()
+		getSkills()
 			.then((data) => {
-				setTechnologies(data);
+				const mergedSkills = data.reduce((result, technology) => {
+					const { libraries, ...rest }: Technology & { libraries?: Library[] } =
+						technology;
+
+					result.push(rest);
+
+					if (libraries && libraries.length > 0) {
+						result.push(
+							...libraries.map((library: Library) => ({
+								...library,
+								isTechnology: false,
+							}))
+						);
+					}
+					return result;
+				}, [] as (Technology & { libraries?: Library[]; isTechnology?: boolean })[]); // Добавляем флаг `isTechnology` для различения технологий и библиотек
+				setSkills(mergedSkills);
 			})
 			.catch((error) => {
 				console.error('Error fetching technologies:', error);
 			});
 	}, []);
 
-	return { technologies, isLoading };
+	return { skills };
 };

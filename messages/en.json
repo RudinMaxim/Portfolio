@@ -5,10 +5,10 @@
 		"location": "Russia, Perm",
 		"shortAboutme": {
 			"title": "About me",
-			"text": "I am a Full Stack developer with over 2 years of experience. I have worked both in businesses and as a freelancer. My specialization is in developing web applications using React.ts and writing RESTful APIs in Go. Additionally, I have experience in cybersecurity, being able to protect web applications from various threats and attacks. My English language skills are at a level where I can read documentation effectively."
+			"text": "I am a developer with more than 2 years of experience in commercial development, specializing in web applications in React and RESTful API in Go. I also have DevOps skills, including experience with containerization and security."
 		},
 		"shortSkills": {
-			"title": "My skills"
+			"title": "Basic Skills"
 		}
 	},
 	"Components": {

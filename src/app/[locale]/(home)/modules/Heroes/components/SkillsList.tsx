@@ -4,15 +4,15 @@ import { useHeroes } from '../Heroes.hook';
 import style from '../Heroes.module.scss';
 
 export function SkillsList() {
-	const { technologies } = useHeroes();
+	const { skills } = useHeroes();
 
-	if (!technologies || !technologies.length) {
+	if (!skills || !skills.length) {
 		return <SkillsListSkeleton />;
 	}
 
 	return (
 		<ul className={style.SkillsList}>
-			{technologies.map((skill) => (
+			{skills.map((skill) => (
 				<li key={skill.id} title={skill.description}>
 					<ButtonLink href={`/project?technologies=${skill.name}`}>
 						{skill.name}

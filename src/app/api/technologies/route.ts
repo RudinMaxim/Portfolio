@@ -22,6 +22,7 @@ export async function GET(): Promise<NextResponse> {
 				description: true,
 				versions: true,
 				direction: true,
+				isShowed: true,
 				createdAt: true,
 				updatedAt: true,
 			},
@@ -41,18 +42,21 @@ export async function GET(): Promise<NextResponse> {
 
 export async function POST(request: NextRequest): Promise<NextResponse> {
 	try {
-		const { name, description, versions } =
-			await createTechnologiesSchema.parseAsync(request.json());
+		const requestData = await request.json();
 
-		const newProject = await prisma.technology.createMany({
+		const { name, description, versions, isShowed } =
+			await createTechnologiesSchema.parseAsync(requestData);
+
+		const newTechnology = await prisma.technology.create({
 			data: {
 				name,
 				description,
 				versions,
+				isShowed,
 			},
 		});
 
-		return NextResponse.json(newProject);
+		return NextResponse.json(newTechnology);
 	} catch (error) {
 		if (error instanceof z.ZodError) {
 			return NextResponse.json({ errors: error.issues }, { status: 400 });
@@ -64,7 +68,9 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
 
 export async function DELETE(request: NextRequest): Promise<NextResponse> {
 	try {
-		const { id } = await DeleteTechnologySchema.parseAsync(request.json());
+		const requestData = await request.json();
+
+		const { id } = await DeleteTechnologySchema.parseAsync(requestData);
 
 		const deletedTechnology = await prisma.technology.delete({
 			where: {
@@ -83,8 +89,10 @@ export async function DELETE(request: NextRequest): Promise<NextResponse> {
 
 export async function PUT(request: NextRequest): Promise<NextResponse> {
 	try {
+		const requestData = await request.json();
+
 		const { id, ...data } = await UpdateTechnologySchema.parseAsync(
-			await request.json()
+			requestData
 		);
 
 		const updatedTechnology = await prisma.technology.update({

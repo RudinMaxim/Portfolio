@@ -2,9 +2,9 @@ import axios from 'axios';
 import { Technology } from '../../app/api/technologies/schema';
 import { BASE_URL } from '../constants/url';
 
-export const getTechnologies = async () => {
+export const getSkills = async () => {
 	try {
-		const response = await axios.get<Technology[]>('/api/technologies', {
+		const response = await axios.get<Technology[]>('/api/skills', {
 			baseURL: BASE_URL,
 		});
 

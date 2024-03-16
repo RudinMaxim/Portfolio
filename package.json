@@ -24,6 +24,7 @@
 		"react-dom": "18.2.0",
 		"react-icons": "^4.11.0",
 		"sass": "^1.67.0",
+		"sonner": "^1.4.3",
 		"typescript": "5.2.2",
 		"zod": "^3.22.4"
 	},

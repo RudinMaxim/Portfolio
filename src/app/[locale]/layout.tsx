@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Montserrat } from 'next/font/google';
+import { Toaster } from 'sonner';
 import { Footer, Header } from '../../components';
 import '../../lib/utils/env';
 import { getMetadata } from '../../lib/utils/getMetadata';
@@ -22,6 +23,7 @@ export default function RootLayout({
 				<Header />
 				{children}
 				<Footer />
+				<Toaster position='top-right' expand={false} richColors />
 			</body>
 		</html>
 	);

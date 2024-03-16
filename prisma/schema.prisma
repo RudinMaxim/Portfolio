@@ -18,6 +18,7 @@ enum Direction {
   FRONTEND
   BACKEND
   DEVOPS
+  OTHER
 }
 
 model Project {
@@ -27,11 +28,11 @@ model Project {
   tag          ProjectType  @default(PERSONAL)
   links        String[]
   technologies Technology[]
+  libraries    Libraries[]
   start        DateTime
   end          DateTime?
   createdAt    DateTime     @default(now())
   updatedAt    DateTime     @updatedAt
-  Module       Libraries[]
 
   @@index([name], name: "project_name_idx")
   @@map("projects")
@@ -44,7 +45,8 @@ model Technology {
   versions    String?
   direction   Direction   @default(FRONTEND)
   projects    Project[]
-  modules     Libraries[]
+  libraries   Libraries[]
+  isShowed    Boolean     @default(true)
   createdAt   DateTime    @default(now())
   updatedAt   DateTime    @updatedAt
 
@@ -55,12 +57,15 @@ model Technology {
 model Libraries {
   id           String     @id @default(uuid())
   name         String
+  description  String?
+  versions     String?
   technologyId String
+  isShowed     Boolean    @default(true)
   technology   Technology @relation(fields: [technologyId], references: [id])
-  project      Project?   @relation(fields: [projectId], references: [id])
-  projectId    String?
   createdAt    DateTime   @default(now())
   updatedAt    DateTime   @updatedAt
+  Project      Project?   @relation(fields: [projectId], references: [id])
+  projectId    String?
 
   @@index([name], name: "libraries_name_idx")
   @@map("libraries")
