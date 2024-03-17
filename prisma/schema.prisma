@@ -42,7 +42,7 @@ model Technology {
   id          String      @id @default(uuid())
   name        String      @unique
   description String?
-  versions    String?
+  versions    String?     @default("latest")
   direction   Direction   @default(FRONTEND)
   projects    Project[]
   libraries   Libraries[]
@@ -58,7 +58,7 @@ model Libraries {
   id           String     @id @default(uuid())
   name         String
   description  String?
-  versions     String?
+  versions     String?    @default("latest")
   technologyId String
   isShowed     Boolean    @default(true)
   technology   Technology @relation(fields: [technologyId], references: [id])
@@ -69,4 +69,12 @@ model Libraries {
 
   @@index([name], name: "libraries_name_idx")
   @@map("libraries")
+}
+
+model Submission {
+  id        String   @id @default(uuid())
+  name      String
+  email     String
+  message   String
+  createdAt DateTime @default(now())
 }

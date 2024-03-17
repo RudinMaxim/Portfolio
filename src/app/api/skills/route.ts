@@ -22,16 +22,20 @@ export async function GET(): Promise<NextResponse> {
 						id: true,
 						name: true,
 						description: true,
-						versions: true,
-						technologyId: true,
-						projectId: true,
 						createdAt: true,
 						updatedAt: true,
+						isShowed: true,
 					},
 					where: {
 						isShowed: true,
 					},
+					orderBy: {
+						name: 'asc',
+					},
 				},
+			},
+			where: {
+				isShowed: true,
 			},
 		});
 

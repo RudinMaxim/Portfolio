@@ -11,6 +11,7 @@
 		"migrate": "prisma migrate dev --name init"
 	},
 	"dependencies": {
+		"@hookform/resolvers": "^3.3.4",
 		"@prisma/client": "^5.11.0",
 		"@types/node": "20.6.2",
 		"@types/react": "18.2.21",
@@ -22,17 +23,13 @@
 		"next-intl": "^3.0.0-beta.19",
 		"react": "18.2.0",
 		"react-dom": "18.2.0",
+		"react-hook-form": "^7.51.1",
 		"react-icons": "^4.11.0",
 		"sass": "^1.67.0",
 		"sonner": "^1.4.3",
 		"typescript": "5.2.2",
 		"zod": "^3.22.4"
 	},
-	"description": "This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).",
-	"main": "next.config.js",
-	"keywords": [],
-	"author": "",
-	"license": "ISC",
 	"devDependencies": {
 		"prisma": "^5.11.0"
 	}

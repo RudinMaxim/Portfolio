@@ -33,7 +33,8 @@
 			}
 		},
 		"Connect": {
-			"title": "Связаться"
+			"title": "Contact with me",
+			"activity": "Activity hours"
 		}
 	}
 }

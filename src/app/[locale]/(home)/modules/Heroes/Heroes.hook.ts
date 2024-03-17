@@ -3,11 +3,7 @@ import { getSkills } from '../../../../../lib/api/getSkills';
 import { Library } from '../../../../api/libraries/schema';
 import { Technology } from '../../../../api/technologies/schema';
 
-interface IHeroes {
-	skills: Technology[] | null;
-}
-
-export const useHeroes = (): IHeroes => {
+export const useHeroes = (): { skills: Technology[] | null } => {
 	const [skills, setSkills] = useState<
 		(Technology & { libraries?: Library[] })[]
 	>([]);
@@ -30,7 +26,7 @@ export const useHeroes = (): IHeroes => {
 						);
 					}
 					return result;
-				}, [] as (Technology & { libraries?: Library[]; isTechnology?: boolean })[]); // Добавляем флаг `isTechnology` для различения технологий и библиотек
+				}, [] as (Technology & { libraries?: Library[]; isTechnology?: boolean })[]);
 				setSkills(mergedSkills);
 			})
 			.catch((error) => {
