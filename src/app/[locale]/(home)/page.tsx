@@ -1,5 +1,5 @@
 import { Container } from '../../../components';
-import { About, Connect, Heroes } from './modules';
+import { About, Heroes } from './modules';
 
 export default function page() {
 	return (
@@ -7,7 +7,7 @@ export default function page() {
 			<Container>
 				<Heroes />
 				<About />
-				<Connect />
+				{/* <Connect /> */}
 			</Container>
 		</main>
 	);

@@ -33,7 +33,22 @@
 		},
 		"Connect": {
 			"title": "Связаться со мной",
-			"activity": "Часы активности "
+			"activity": "Часы активности",
+			"form": {
+				"name": {
+					"label": "Имя",
+					"placeholder": "Как к вам обращаться?"
+				},
+				"email": {
+					"label": "Email",
+					"placeholder": null
+				},
+				"message": {
+					"label": "Сообщение",
+					"placeholder": "Ваше сообщение"
+				},
+				"submit": "Отправить"
+			}
 		}
 	}
 }

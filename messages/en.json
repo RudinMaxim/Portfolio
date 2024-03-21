@@ -34,7 +34,22 @@
 		},
 		"Connect": {
 			"title": "Contact with me",
-			"activity": "Activity hours"
+			"activity": "Activity hours",
+			"form": {
+				"name": {
+					"label": "Name",
+					"placeholder": "How should I address you?"
+				},
+				"email": {
+					"label": "Email",
+					"placeholder": null
+				},
+				"message": {
+					"label": "Message",
+					"placeholder": "Your message"
+				},
+				"submit": "Submit"
+			}
 		}
 	}
 }

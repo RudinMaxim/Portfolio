@@ -6,7 +6,13 @@ export const useTheme = (): {
 	icon: any;
 	toggleTheme: () => void;
 } => {
-	const [theme, setTheme] = useState<string>('light');
+	const [theme, setTheme] = useState(
+		window.matchMedia
+			? window.matchMedia('(prefers-color-scheme: dark)').matches
+				? 'dark'
+				: 'light'
+			: 'light'
+	);
 	const icon = theme === 'light' ? dark_mode : light_mode;
 
 	useEffect(() => {

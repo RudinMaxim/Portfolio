@@ -13,8 +13,8 @@ export function ConnectForm() {
 				register={register('name')}
 				name='name'
 				label='Имя'
+				placeholder='Как к вам обращаться?'
 				error={errors.name?.message}
-				optional
 			/>
 			<Input
 				register={register('email')}
@@ -28,7 +28,6 @@ export function ConnectForm() {
 				name='message'
 				label='Сообщение'
 				error={errors.message?.message}
-				optional
 			/>
 
 			<Button type='submit' isSubmitting={isSubmitting}>
