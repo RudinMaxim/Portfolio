@@ -2,6 +2,7 @@
   margin: 0.5rem;
 
   .ProjectList {
+    margin-top: 1rem;
   }
   p {
     text-align: justify;
@@ -25,7 +26,6 @@
       .project_item_header_title {
         display: flex;
         align-items: center;
-        width: 100%;
         gap: 1rem;
       }
       span {
@@ -123,6 +123,7 @@
   }
   .project_item_header_title {
     flex-direction: column;
+    width: 100% !important;
     text-align: center;
   }
 }

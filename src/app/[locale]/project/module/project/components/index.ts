@@ -1,3 +1,4 @@
-import { ProjectList } from './ProjectList';
+import { ProjectList } from "./ProjectList";
+import { Search } from "./Search";
 
-export { ProjectList };
+export { ProjectList, Search };

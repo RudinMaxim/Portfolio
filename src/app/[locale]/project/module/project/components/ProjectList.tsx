@@ -3,11 +3,10 @@ import { Loader } from "../../../../../../components";
 import { Teg } from "../../../../../../ui";
 import { Library } from "../../../../../api/libraries/schema";
 import { TypeProject } from "../../../../../api/projects/schema";
-import { IProject } from "../Project.hook";
 import style from "../Project.module.scss";
 import { dateRange } from "../utils";
 
-export function ProjectList(props: IProject) {
+export function ProjectList(props: { projects: TypeProject[] }) {
   const { projects } = props;
 
   // TODO добавить скелетон
