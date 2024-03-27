@@ -5,6 +5,7 @@ import { Footer } from './Footer/Footer';
 import { Header } from './Header/Header';
 import Loader from './Loader/Loader';
 import { Logo } from './Logo/Logo';
+import { TextTruncator } from './TextTruncator/TextTruncator';
 import { ThemeButton } from './ThemeButton/ThemeButton';
 
 export {
@@ -15,5 +16,6 @@ export {
 	Header,
 	Loader,
 	Logo,
+	TextTruncator,
 	ThemeButton,
 };
