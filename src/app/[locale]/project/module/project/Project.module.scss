@@ -1,106 +1,128 @@
 .Project {
-	margin: 0.5rem;
+  margin: 0.5rem;
 
-	.ProjectList {
-	}
-	p {
-		text-align: justify;
-	}
+  .ProjectList {
+  }
+  p {
+    text-align: justify;
+  }
 
-	.project_item {
-		width: 100%;
-		padding: 1rem;
-		border: 1px solid var(--secondary-color);
-		border-radius: 6px;
-		margin-bottom: 1rem;
+  .project_item {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid var(--secondary-color);
+    border-radius: 6px;
+    margin-bottom: 1rem;
 
-		header {
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			flex-wrap: wrap;
-			margin-bottom: 1rem;
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      width: 100%;
+      margin-bottom: 1rem;
 
-			.project_item_header_title {
-				display: flex;
-				align-items: center;
-				gap: 1rem;
-			}
-			span {
-				font-size: 0.75rem;
-				font-weight: 600;
-			}
-		}
+      .project_item_header_title {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        gap: 1rem;
+      }
+      span {
+        font-size: 0.75rem;
+        font-weight: 600;
+      }
+    }
 
-		.project_item_body {
-			display: flex;
-			gap: 1rem;
-			.project_item_body_left {
-				width: 800px;
-				height: 400px;
+    .project_item_body {
+      position: relative;
+      display: flex;
+      gap: 1rem;
+      .project_item_body_left {
+        width: 850px;
+        height: 400px;
 
-				.image {
-					height: 100%;
-					border-bottom-left-radius: 0;
-					border-bottom-right-radius: 0;
-					border-radius: 6px;
-					background: linear-gradient(
-							100deg,
-							rgba(255, 255, 255, 0.5) 40%,
-							rgba(255, 255, 255, 0) 50%,
-							rgba(255, 255, 255, 0.5) 60%
-						)
-						var(--secondary-color);
-					border-radius: 5px;
-					background-size: 200% 100%;
-					animation: 1.5s shine linear infinite;
-				}
-			}
+        .image {
+          height: 100%;
+          border-bottom-left-radius: 0;
+          border-bottom-right-radius: 0;
+          border-radius: 6px;
+          background: linear-gradient(
+              100deg,
+              rgba(255, 255, 255, 0.5) 40%,
+              rgba(255, 255, 255, 0) 50%,
+              rgba(255, 255, 255, 0.5) 60%
+            )
+            var(--secondary-color);
+          border-radius: 5px;
+          background-size: 200% 100%;
+          animation: 1.5s shine linear infinite;
+        }
+      }
 
-			.project_item_body_right {
-				width: 100%;
-				display: flex;
-				flex-direction: column;
+      .project_item_body_right {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
 
-				.project_item_body_right_item {
-					margin-bottom: 1rem;
+        .project_item_body_right_item {
+          margin-bottom: 1rem;
 
-					h3 {
-						font-size: 1rem;
-					}
-				}
-				.project_item_tehnolaogies {
-					display: flex;
-					flex-wrap: wrap;
-					align-items: center;
-					gap: 0.5rem;
-				}
+          h3 {
+            font-size: 1rem;
+          }
+        }
+        .project_item_tehnolaogies {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          gap: 0.5rem;
+        }
 
-				.project_item_Link {
-					a {
-						font-size: 0.75rem;
-						transition: var(--transition);
-						&:hover {
-							opacity: 0.7;
-						}
-					}
-				}
-			}
-		}
+        .project_item_Link {
+          a {
+            font-size: 0.75rem;
+            transition: var(--transition);
+            &:hover {
+              opacity: 0.7;
+            }
+          }
+        }
+      }
+    }
 
-		&:last-child {
-			margin-bottom: 0;
-		}
-	}
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 }
 @keyframes shine {
-	to {
-		background-position-x: -200%;
-	}
+  to {
+    background-position-x: -200%;
+  }
 }
 
 @media screen and (max-width: 768px) {
-	.project_item_body {
-		flex-wrap: wrap;
-	}
+  .project_item_body {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 1170px) {
+  .project_item_body {
+    article {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .project_item {
+    padding: 0.5rem !important;
+  }
+  .project_item_header_title {
+    flex-direction: column;
+    text-align: center;
+  }
 }
